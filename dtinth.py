@@ -55,3 +55,4 @@ font.fontname = 'Comic Shanns dtinth'
 font.familyname = 'Comic Shanns dtinth'
 font.fullname = 'Comic Shanns dtinth'
 font.generate('comic-shanns-dtinth.otf')
+font.generate('comic-shanns-dtinth.ttf')
