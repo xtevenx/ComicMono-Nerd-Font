@@ -1,23 +1,28 @@
 # Comic Mono
-A monospaced font based on [Shannon Miwa](https://github.com/shannpersand)’s [Comic Shanns](https://github.com/shannpersand/comic-shanns).
+A legible monospace font based on [Shannon Miwa](https://github.com/shannpersand)’s [Comic Shanns](https://github.com/shannpersand/comic-shanns).
 
-## Changes from Comic Shanns
-1. All glyphs have been adjusted to have exactly the same width (using code based on [monospacifier](https://github.com/cpitclaudel/monospacifier))
+## Download
+- [ComicMono.ttf](https://dtinth.github.io/comic-mono-font/ComicMono.ttf)
+- [ComicMono-Bold.ttf](https://dtinth.github.io/comic-mono-font/ComicMono-Bold.ttf)
+
+## Differences from Comic Shanns
+1. All glyphs have been adjusted to have exactly the same width (using code based on [monospacifier](https://github.com/cpitclaudel/monospacifier)).
 2. The glyph metrics have been adjusted to make it display better alongside system font, based on [Cousine](https://fonts.google.com/specimen/Cousine)’s metrics.
 3. The name is changed to `Comic Mono`.
-4. A bold version of the font is generated using [FontForge’s Embolden](https://fontforge.github.io/Styles.html#Embolden) 
+4. A bold version of the font is generated using [FontForge’s Embolden](https://fontforge.github.io/Styles.html#Embolden) operation.
 
-I have no font creation skills, just a software developer. The original font, [Comic Shanns](https://github.com/shannpersand/comic-shanns), is patched using a Python script, [`generate.py`](generate.py).
-
-## Usage
-You can download it and install it like any other font.
+I have no font creation skills; I’m just a software developer. This font family is created by patching the original font, [Comic Shanns](https://github.com/shannpersand/comic-shanns), using a Python script, [`generate.py`](generate.py).
 
 ## What does it look like?
-Like if someone made a dumbass version of Comic Sans that is monospaced.
+<p class="website-hidden">
+  <a href="https://dtinth.github.io/comic-mono-font/#what-does-it-look-like">
+    Check it out!
+  </a>
+</p>
 
-![image 1](https://user-images.githubusercontent.com/4615568/44279591-c9909780-a206-11e8-9e1d-40db6d6db77e.png)
-![image 2](https://user-images.githubusercontent.com/4615568/44279592-ca292e00-a206-11e8-9278-4a7566425c0c.png)
-![image](https://user-images.githubusercontent.com/4615568/44279593-ca292e00-a206-11e8-9b25-a4533b50d471.png)
+```python
+{% include_relative generate.py %}
+```
 
 ## License
 It is licensed under the [MIT License](LICENSE).
