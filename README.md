@@ -1,6 +1,12 @@
 # Comic Mono
 A legible monospace font based on [Shannon Miwa](https://github.com/shannpersand)’s [Comic Shanns](https://github.com/shannpersand/comic-shanns).
 
+<p class="website-hidden">
+  <a href="https://dtinth.github.io/comic-mono-font/">
+    <img src="https://repository-images.githubusercontent.com/164606802/cd83d680-894c-11e9-83f7-c353c70df1cb" alt="Screenshot">
+  </a>
+</p>
+
 ## Download
 - [ComicMono.ttf](https://dtinth.github.io/comic-mono-font/ComicMono.ttf)
 - [ComicMono-Bold.ttf](https://dtinth.github.io/comic-mono-font/ComicMono-Bold.ttf)
