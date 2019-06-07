@@ -1,11 +1,17 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
-"""Update the glyph metrics so that they all really have the same size."""
+"""
+Generates the Comic Mono font files based on Comic Shanns font.
 
-# Based on
-# - monospacifier: https://github.com/cpitclaudel/monospacifier/blob/master/monospacifier.py
-# - YosemiteAndElCapitanSystemFontPatcher: https://github.com/dtinth/YosemiteAndElCapitanSystemFontPatcher/blob/master/bin/patch
+Required files:
+- vendor/comic-shanns.otf
+- vendor/Cousine-Regular.ttf
+
+Based on:
+- monospacifier: https://github.com/cpitclaudel/monospacifier/blob/master/monospacifier.py
+- YosemiteAndElCapitanSystemFontPatcher: https://github.com/dtinth/YosemiteAndElCapitanSystemFontPatcher/blob/master/bin/patch
+"""
 
 import os
 import re
@@ -21,7 +27,7 @@ import unicodedata
 def height(font):
     return float(font.capHeight)
 
-def adjust_height(source, template):
+def adjust_height(source, template, scale):
     source.selection.all()
     source.transform(psMat.scale(height(template) / height(source)))
     for attr in ['ascent', 'descent',
@@ -34,10 +40,10 @@ def adjust_height(source, template):
                 'os2_typodescent', 'os2_typodescent_add',
                 ]:
         setattr(source, attr, getattr(template, attr))
-    source.transform(psMat.scale(0.9))
+    source.transform(psMat.scale(scale))
 
-font = fontforge.open('comic-shanns.otf')
-ref = fontforge.open('vendor/Menlo.ttc')
+font = fontforge.open('vendor/comic-shanns.otf')
+ref = fontforge.open('vendor/Cousine-Regular.ttf')
 for g in font.glyphs():
     uni = g.unicode
     category = unicodedata.category(unichr(uni)) if 0 <= uni <= sys.maxunicode else None
@@ -49,10 +55,20 @@ for g in font.glyphs():
             g.right_side_bearing += delta - g.left_side_bearing
             g.width = target_width
 
-adjust_height(font, ref)
+font.familyname = 'Comic Mono'
+font.version = '0.1.1'
+font.comment = 'https://github.com/dtinth/comic-mono-font'
+font.copyright = 'https://github.com/dtinth/comic-mono-font/blob/master/LICENSE'
+
+adjust_height(font, ref, 0.875)
 font.sfnt_names = [] # Get rid of 'Prefered Name' etc.
-font.fontname = 'Comic Shanns dtinth'
-font.familyname = 'Comic Shanns dtinth'
-font.fullname = 'Comic Shanns dtinth'
-font.generate('comic-shanns-dtinth.otf')
-font.generate('comic-shanns-dtinth.ttf')
+font.fontname = 'ComicMono'
+font.fullname = 'Comic Mono'
+font.generate('ComicMono.ttf')
+
+font.selection.all()
+font.fontname = 'ComicMono-Bold'
+font.fullname = 'Comic Mono Bold'
+font.weight = 'Bold'
+font.changeWeight(32, "LCG", 0, 0, "squish")
+font.generate('ComicMono-Bold.ttf')
