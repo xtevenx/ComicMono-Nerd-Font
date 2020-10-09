@@ -1,34 +1,19 @@
-# Comic Mono
-A legible monospace font... the very typeface you’ve been trained to recognize since childhood. This font is a fork of [Shannon Miwa](https://github.com/shannpersand)’s [Comic Shanns](https://github.com/shannpersand/comic-shanns).
+ComicMono Nerd Font
+===================
+This font is a patched Nerd Font version of [Comic Mono][1] which is in turn a
+fork of [Comic Shanns][2].
 
-<p class="website-hidden">
-  <a href="https://dtinth.github.io/comic-mono-font/">
-    <img src="https://repository-images.githubusercontent.com/164606802/cd83d680-894c-11e9-83f7-c353c70df1cb" alt="Screenshot">
-  </a>
-</p>
+Download
+--------
+- [ComicMono-Nerd-Font.ttf][3]
+- [ComicMono-Nerd-Font-Bold.ttf][4]
 
-## Download
-- [ComicMono.ttf](https://dtinth.github.io/comic-mono-font/ComicMono.ttf)
-- [ComicMono-Bold.ttf](https://dtinth.github.io/comic-mono-font/ComicMono-Bold.ttf)
+License
+-------
+It is licensed under the [MIT License][5].
 
-## Differences from Comic Shanns
-1. All glyphs have been adjusted to have exactly the same width (using code based on [monospacifier](https://github.com/cpitclaudel/monospacifier)).
-2. The glyph metrics have been adjusted to make it display better alongside system font, based on [Cousine](https://fonts.google.com/specimen/Cousine)’s metrics.
-3. The name is changed to `Comic Mono`.
-4. A bold version of the font is generated using [FontForge’s Embolden](https://fontforge.github.io/Styles.html#Embolden) operation.
-
-I have no font creation skills; I’m just a software developer. This font family is created by patching the original font, [Comic Shanns](https://github.com/shannpersand/comic-shanns), using a Python script, [`generate.py`](generate.py).
-
-## What does it look like?
-<p class="website-hidden">
-  <a href="https://dtinth.github.io/comic-mono-font/#what-does-it-look-like">
-    Check it out!
-  </a>
-</p>
-
-```python
-{% include_relative generate.py %}
-```
-
-## License
-It is licensed under the [MIT License](LICENSE).
+[1]: https://github.com/dtinth/comic-mono-font
+[2]: https://github.com/shannpersand/comic-shanns
+[3]: https://github.com/xtevenx/comic-mono-font/raw/master/ComicMono-Nerd-Font.ttf
+[4]: https://github.com/xtevenx/comic-mono-font/raw/master/ComicMono-Nerd-Font-Bold.ttf
+[5]: https://github.com/xtevenx/comic-mono-font/blob/master/LICENSE
