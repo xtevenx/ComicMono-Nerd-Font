@@ -17,11 +17,12 @@ characterful than the first version.
 - [ComicMonoNerdFont-Regular.ttf][5]
 - [ComicMonoNerdFont-Bold.ttf][6]
 
-"Official" version
-------------------
+Official version
+----------------
 The maintainers of Nerd Fonts have patched their own version which can be found [here][7]! This is
-based on Rodrigodd's [comic-shanns-mono][8], another monospaced version of Comic Shanns. It looks
-high quality, and is even more spaced out than the Version 2 in this repository.
+based on Rodrigodd's [comic-shanns-mono][8], another monospaced version of Comic Shanns. It
+honestly looks higher quality than what I have here, but is feels even more spaced out than Version
+2, though that might just be font weight instead of spacing.
 
 License
 -------
